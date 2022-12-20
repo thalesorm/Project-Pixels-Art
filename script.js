@@ -1,5 +1,5 @@
 const coresPalet = document.getElementsByClassName('color');
-const colors = ['green', 'red', 'blue', 'yellow'];
+const colors = ['black', 'red', 'blue', 'yellow'];
 
 function paletColor() {
   for (let i = 0; i < coresPalet.length; i += 1) {
