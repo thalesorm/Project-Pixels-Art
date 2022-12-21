@@ -1,11 +1,26 @@
 function creatPalet() {
-  const paletColor = document.getElementById('color-palette');
+  const paletteColor = document.getElementById('color-palette');
   const colors = ['black', 'red', 'blue', 'yellow'];
   for (let i = 0; i < 4; i += 1) {
-    const quadrado = document.createElement('div');
-    quadrado.classList = 'color';
-    quadrado.style.backgroundColor = colors[i];
-    paletColor.appendChild(quadrado);
+    const pixelsPalette = document.createElement('div');
+    pixelsPalette.classList = 'color';
+    pixelsPalette.style.backgroundColor = colors[i];
+    paletteColor.appendChild(pixelsPalette);
   }
 }
 creatPalet();
+
+function tablePixels() {
+  const pixels = document.getElementById('pixel-board');
+  for (let index = 0; index < 25; index += 1) {
+    if (index % 5 === 0) {
+      const newLine = document.createElement('div');
+      pixels.appendChild(newLine);
+    }
+    const creatTablePixel = document.createElement('div');
+    creatTablePixel.classList = 'pixel';
+    creatTablePixel.style.backgroundColor = 'white';
+    pixels.appendChild(creatTablePixel);
+  }
+}
+tablePixels();
