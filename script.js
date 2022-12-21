@@ -4,6 +4,9 @@ function creatPalet() {
   for (let i = 0; i < 4; i += 1) {
     const pixelsPalette = document.createElement('div');
     pixelsPalette.classList = 'color';
+    if (i === 0) {
+      pixelsPalette.classList.add('selected');
+    }
     pixelsPalette.style.backgroundColor = colors[i];
     paletteColor.appendChild(pixelsPalette);
   }
